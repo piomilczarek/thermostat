@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Thermostat">
+    <meta name="author" content="">
+    <title>Thermostat Control Panel</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="static/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="static/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="static/theme.css" rel="stylesheet">
+    <script src="static/assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>
+  
+    </script>
+    <script src="static/main.js"></script>
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-sm-4">
+                <p class="smallText">Apartment program temperature:</p>
+                <p id="desiredTemp"></p>
+                <p class="smallText">Actual apartment temperature: </p><div id="currTemp" class="smallText"></div>
+                
+                <div class="alert alert-info" role="alert" style="float: left;" id="chOff">
+                        Central heating is <b>OFF</b>
+                </div>
+          
+                <div class="alert alert-success" role="alert" style="float: left;" id="chOn">
+                        Central heating is <b>ON</b>
+                </div>
+             
+                <div class="alert alert-info" role="alert" style="float: right;" id="hwOff">
+                        Hot water is <b>OFF</b>
+                </div>                    
+              
+                <div class="alert alert-success" role="alert" style="float: right;" id="hwOn">
+                        Hot water is <b>ON</b>
+                </div>            
+      </div>
+      <div class="col-sm-2">
+                <p><button id="TempPlus" class="btn btn-lg btn-success">+</button>
+                <button id="TempMinus" class="btn btn-lg btn-success">-</button></p>
+             
+      </div>
+      <div class="col-sm-6">
+       
+          <button id="ForceCH">Heating - 15 min boost</button>
+          <button id="ForceHW">Hot water - 30 min boost</button>
+          <button id="HolidayMode">Holiday mode</button>
+          <button id="WeekendMode">Weekend mode</button>
+          <button id="SummerMode">Summer mode</button>
+        
+      </div><!-- /.col-sm-4 -->
+    </div><!-- /.row -->
+    <div class="row">
+      <div class="col-sm-4 col-height">
+        <iframe src="https://www.meteoblue.com/en/weather/widget/daily/
+          dublin_ireland_2964574?geoloc=fixed&days=6&tempunit=CELSIUS&windunit=
+          KNOT&coloured=coloured&pictoicon=0&pictoicon=1&maxtemperature=
+          0&maxtemperature=1&mintemperature=0&mintemperature=1&windspeed=0&windspeed
+          =1&windgust=0&windgust=1&winddirection=0&winddirection=1&uv=0&humidity=
+          0&precipitation=0&precipitationprobability=0&spot=0&pressure=0&layout=light"
+          frameborder="0" scrolling="NO" allowtransparency="true" sandbox="allow-same-origin
+          allow-scripts allow-popups" style="width: 324px;height: 280px"></iframe><div>
+          <!-- DO NOT REMOVE THIS LINK --><a href="https://www.meteoblue.com/en/weather/forecast/week/
+          dublin_ireland_2964574?utm_source=weather_widget&utm_medium=linkus&utm_content=daily
+          &utm_campaign=Weather%2BWidget" target="_blank"></a></div>
+      </div><!-- /.col-sm-4 -->
+
+      <div class="col-sm-4 col-height">
+          col
+      </div><!-- /.col-sm-4 -->
+
+      <div class="col-sm-4 col-height">
+          col
+      </div><!-- /.col-sm-4 -->
+    </div>
+  </body>
